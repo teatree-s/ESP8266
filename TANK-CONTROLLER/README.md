@@ -36,9 +36,15 @@ Arduino IDE からスケッチをマイコンボードに書き込みし、ホ�
 
 # 4. 使い方
 
+## 4.1. ファイルアップロード
+
+タンクをコントロールするためのホームページ「index.html」を D1 Mini へアップロードするには LittleFS を使用します。
+
+- [Arduino ESP8266 LittleFS Filesystem Uploader](https://github.com/earlephilhower/arduino-esp8266littlefs-plugin)
+
 更新中・・・
 
-## 4.1. 配線図
+## 4.2. 配線図
 
 <img src="./img/wiring-diagram.jpeg" width="480">
 
