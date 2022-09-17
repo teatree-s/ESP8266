@@ -1,0 +1,133 @@
+<html>
+  <body>
+    <div align="center">
+      <p class="title">Tank Controller</p>
+    </div>
+    <div align="center">
+      <div class="abxy-btn-set">
+        <div class="cross-layout">
+          <button
+            class="btn abxy-btn cross-layout-position-top btn-x"
+            onclick="command('1')"
+          >
+            Front
+          </button>
+          <button
+            class="btn abxy-btn cross-layout-position-left btn-y"
+            onclick="command('2')"
+          >
+            Left
+          </button>
+          <button
+            class="btn abxy-btn cross-layout-position-right btn-a"
+            onclick="command('3')"
+          >
+            Right
+          </button>
+          <button
+            class="btn abxy-btn cross-layout-position-bottom btn-b"
+            onclick="command('4')"
+          >
+            Back
+          </button>
+          <button
+            class="btn abxy-btn cross-layout-position-center btn-bk"
+            onclick="command('5')"
+          >
+            Stop
+          </button>
+        </div>
+    </div>
+    <div align="center">
+        <br/><br/><br/>
+        <button class="btn abxy-btn btn-or" onclick="command('')">
+            LED
+        </button>
+    </div>
+  </body>
+</html>
+
+<script>
+  function command(num) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/command" + num);
+    xhr.send(null);
+  }
+</script>
+
+<style>
+  .title {
+    font-size: 6em;
+  }
+
+  .btn {
+    border-style: none;
+    cursor: pointer;
+    font-size: 4em;
+  }
+
+  .cross-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .cross-layout .cross-layout-position-top {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+
+  .cross-layout .cross-layout-position-left {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+
+  .cross-layout .cross-layout-position-center {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+
+  .cross-layout .cross-layout-position-right {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+  }
+
+  .cross-layout .cross-layout-position-bottom {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+  }
+
+  .abxy-btn {
+    border-radius: 50%;
+    width: 4em;
+    height: 4em;
+    color: white;
+  }
+
+  .btn-x {
+    background-color: blue;
+  }
+  .btn-y {
+    background-color: green;
+  }
+  .btn-a {
+    background-color: red;
+  }
+  .btn-b {
+    background-color: yellow;
+    color: lightgray;
+  }
+  .btn-bk {
+    background-color: black;
+  }
+  .btn-or {
+    background-color: orange;
+  }
+
+  .abxy-btn-set {
+    display: inline-block;
+    padding: 1em;
+    background-color: lightgray;
+    border-radius: 50%;
+  }
+</style>

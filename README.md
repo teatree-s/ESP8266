@@ -2,7 +2,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-# プロジェクトについて
+# 1. プロジェクトについて
 
 TCP/IP スタックとマイクロコントローラを備えた Wi-Fi モジュールである Espressif Systems 社の ESP8266 を対象としたプロジェクトです。  
 ESP8266 は、Arduino IDE を使って、C/C++をベースとした Arduino 言語でプログラム開発ができます。  
@@ -12,7 +12,7 @@ ESP8266 は、Arduino IDE を使って、C/C++をベースとした Arduino 言�
 
 <!-- ABOUT THE TARGET -->
 
-# ESP8266 仕様
+# 2. ESP8266 仕様
 
 - 32 ビット RISC CPU: Tensilica Xtensa LX106 running at 80 MHz\*
 - 命令 RAM 64KiB、データ RAM 96KiB
@@ -28,12 +28,12 @@ ESP8266 は、Arduino IDE を使って、C/C++をベースとした Arduino 言�
 
 <!-- GETTING STARTED -->
 
-# さあ、はじめよう！
+# 3. さあ、はじめよう！
 
 本プロジェクトのスケッチを使用するには、Arduino IDE 開発環境と ESP8266 が動作するための設定が必要です。  
 以下の手順で環境を構築ください。
 
-## Arduino IDE のインストール
+## 3.1. Arduino IDE のインストール
 
 Arduino の HP より環境に応じた Arduino IDE をダウンロードしてインストールしてください。
 
@@ -42,7 +42,7 @@ https://www.arduino.cc/en/software
 Windows を使用している場合には右の「DOWNLOAD OPTIONS」から「Windows Win 7 and newer」を選択です。  
 その後、すぐにダウンロードする場合には「JUST DOWNLOAD」を選択します。
 
-## ESP8266 の環境構築
+## 3.2. ESP8266 の環境構築
 
 公式サイトの「Installing with Boards Manager」から確認頂くのが良いと思いますが、以下にも簡単に記載しておきます。
 
@@ -61,15 +61,17 @@ Arduino では、ボード マネージャーを使用してサードパーテ�
 
 <!-- USAGE EXAMPLES -->
 
-# 使い方
+# 4. 使い方
 
 WeMos D1 Mini を使ったスケッチを置いています。各プロジェクトにて詳細確認ください。
+
+- TANK-CONTROLLER : モータドライバー(Mini L298)を使ったラジコンプロジェクト
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
-# ライセンス
+# 5. ライセンス
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
@@ -77,15 +79,15 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- ACKNOWLEDGMENTS -->
 
-# 参考
+# 6. 参考
 
 - [ESPRESSIF ESP8266](https://www.espressif.com/en/products/socs/esp8266)
 - [GitHub esp8266/Arduino](https://github.com/esp8266/Arduino)
 - [LOLIN D1 mini](https://www.wemos.cc/en/latest/d1/d1_mini.html)
 - [Arduino 日本語リファレンス](http://www.musashinodenpa.com/arduino/ref/index.php)
 
-## WeMos D1 Mini ピンアウト
+## 6.1. WeMos D1 Mini ピンアウト
 
-![WeMos D1 Mini](/d1-mini-pinout.png)
+<img src=".//d1-mini-pinout.png" width="480">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
