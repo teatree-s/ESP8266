@@ -66,8 +66,12 @@ Arduino IDE からスケッチをマイコンボードに書き込みし、ホ�
 
 Google や Youtube で「D1 Mini L298N」を検索すると色々情報入手できます。
 
-## 6.1. ロボットカー
+## 6.1. ラジコンカー
 
-<img src="./img/robot-car.jpeg" width="480">
+<img src="./img/rc-car.jpeg" width="480">
+
+## 6.2. ラジコンタンク
+
+<img src="./img/rc-tank.jpeg" width="480">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
