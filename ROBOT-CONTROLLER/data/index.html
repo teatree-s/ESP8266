@@ -1,0 +1,206 @@
+<html>
+  <body>
+    <div align="center">
+      <p class="title">Tank Controller</p>
+    </div>
+    <div align="center">
+      <div class="cross-btn-set">
+        <div class="cross-layout">
+          <button
+            class="btn cross-btn cross-layout-position-top btn-front"
+            onclick="command('front')"
+          >
+            Front
+          </button>
+          <button
+            class="btn cross-btn cross-layout-position-left btn-left"
+            onclick="command('left')"
+          >
+            Left
+          </button>
+          <button
+            class="btn cross-btn cross-layout-position-right btn-right"
+            onclick="command('right')"
+          >
+            Right
+          </button>
+          <button
+            class="btn cross-btn cross-layout-position-bottom btn-back"
+            onclick="command('back')"
+          >
+            Back
+          </button>
+          <button
+            class="btn cross-btn cross-layout-position-center btn-stop"
+            onclick="command('stop')"
+          >
+            Stop
+          </button>
+        </div>
+      </div>
+    </div>
+    <div align="center">
+      <div class="mode-btn-set">
+        <div class="mode-layout">
+          <button
+            class="btn mode-btn mode-layout-position-left btn-auto"
+            onclick="command('auto')"
+          >
+            Auto
+          </button>
+          <button
+            class="btn mode-btn mode-layout-position-center btn-led"
+            onclick="command('led')"
+          >
+            LED
+          </button>
+          <button
+            id="distance"
+            class="btn mode-btn mode-layout-position-right btn-wk"
+            onclick="commandGetDistance()"
+          >
+            0.0</br>cm
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function command(command) {
+    var request = new XMLHttpRequest();
+    request.open("GET", "/command/" + command);
+    request.send(null);
+  }
+  
+  function commandGetDistance() {
+    var request = new XMLHttpRequest();
+    request.open("GET", "/command/distance");
+    request.onreadystatechange = function () {
+      if (request.readyState == 4 && request.status == 200) {
+        var text = request.response;
+        console.log(text);
+        document.getElementById("distance").innerText = text + "\ncm";
+      }
+    };
+    request.send(null);
+  }
+</script>
+
+<style>
+  .title {
+    font-size: 6em;
+  }
+
+  .btn {
+    border-style: none;
+    cursor: pointer;
+    font-size: 4em;
+  }
+
+  .cross-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .cross-layout .cross-layout-position-top {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+
+  .cross-layout .cross-layout-position-left {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+
+  .cross-layout .cross-layout-position-center {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+
+  .cross-layout .cross-layout-position-right {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+  }
+
+  .cross-layout .cross-layout-position-bottom {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+  }
+
+  .cross-btn {
+    border-radius: 50%;
+    width: 4em;
+    height: 4em;
+    color: white;
+  }
+
+  .cross-btn-set {
+    border-radius: 50%;
+    display: inline-block;
+    padding: 1em;
+    background-color: lightgray;
+  }
+
+  .mode-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .mode-layout .mode-layout-position-left {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  .mode-layout .mode-layout-position-center {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+
+  .mode-layout .mode-layout-position-right {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+  }
+
+  .mode-btn {
+    border-radius: 25%;
+    width: 4em;
+    height: 4em;
+    color: white;
+  }
+
+  .mode-btn-set {
+    display: inline-block;
+    padding: 1em;
+  }
+
+  .btn-front {
+    background-color: blue;
+  }
+  .btn-left {
+    background-color: green;
+  }
+  .btn-right {
+    background-color: red;
+  }
+  .btn-back {
+    background-color: yellow;
+    color: gray;
+  }
+  .btn-stop {
+    background-color: black;
+  }
+  .btn-led {
+    background-color: orange;
+  }
+  .btn-auto {
+    background-color: violet;
+  }
+  .btn-wk {
+    background-color: WhiteSmoke;
+    color: DimGray;
+  }
+</style>
