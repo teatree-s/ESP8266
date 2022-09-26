@@ -70,6 +70,6 @@ Google や Youtube で「D1 Mini L298N」を検索すると色々情報入手で
 
 ## 6.1. ロボットカー
 
-更新中・・・
+<img src="./img/robot-car.jpeg" width="480">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
