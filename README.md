@@ -66,6 +66,7 @@ Arduino では、ボード マネージャーを使用してサードパーテ�
 WeMos D1 Mini を使ったスケッチを置いています。各プロジェクトにて詳細確認ください。
 
 - TANK-CONTROLLER : モータドライバー(Mini L298)を使ったラジコンプロジェクト
+- ROBOT-CONTROLLER : モータドライバー(Mini L298)と、超音波距離センサー(HC-SR04)を使ったロボットカープロジェクト
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
