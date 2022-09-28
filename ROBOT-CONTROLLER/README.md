@@ -48,7 +48,7 @@ Arduino IDE からスケッチをマイコンボードに書き込みし、ホ�
 
 ## 4.2. 配線図
 
-更新中・・・
+<img src="./img/wiring-diagram.jpeg" width="480">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
