@@ -20,7 +20,15 @@ Arduino IDE からスケッチをマイコンボードに書き込みし、ホ�
 
 # 2. HC-SR04 仕様
 
-- 更新中・・・
+- 測距範囲：2~400cm
+- 電源電圧：DC 5.0V
+- 動作電流：15mA
+- 動作周波数：40kHz
+- トリガ信号：10μS(TTL レベルのパルス波)
+- エコー出力信号：反射(往復)時間
+- サイズ：45×20×15mm
+
+※通電時は GND 端子が最初に接続されるようにしてください。
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -30,8 +38,6 @@ Arduino IDE からスケッチをマイコンボードに書き込みし、ホ�
 
 本プロジェクトのスケッチを使用するには、事前に Arduino IDE 開発環境と ESP8266 が動作するための設定が必要です。
 
-## 3.1. 更新中・・・
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
@@ -40,11 +46,9 @@ Arduino IDE からスケッチをマイコンボードに書き込みし、ホ�
 
 ## 4.1. ファイルアップロード
 
-タンクをコントロールするためのホームページ「index.html」を D1 Mini へアップロードするには LittleFS を使用します。
+ロボットカーをコントロールするためのホームページ「index.html」を D1 Mini へアップロードするには LittleFS を使用します。
 
 - [Arduino ESP8266 LittleFS Filesystem Uploader](https://github.com/earlephilhower/arduino-esp8266littlefs-plugin)
-
-更新中・・・
 
 ## 4.2. 配線図
 
@@ -65,8 +69,9 @@ Arduino IDE からスケッチをマイコンボードに書き込みし、ホ�
 - [Arduino で DC モーターを制御する](https://burariweb.info/electronic-work/arduino-learning/arduino-motor-driver-l298n.html)
 - [Arduino と Mini L298N モータードライバーでモーターを制御する](https://web-memo-s.hatenablog.com/entry/2021/02/22/125619)
 - [Create a WIFI-controlled Robot with Wemos D1 Mini + L298N](https://www.youtube.com/watch?v=BuSS_MBPCEk)
+- [ESP8266-Wemos D1 mini with HC-SR04 Ultrasonic Sensor](https://microdigisoft.com/esp8266-wemos-d1-mini-with-hc-sr04-ultrasonic-sensor/)
 
-Google や Youtube で「D1 Mini L298N」を検索すると色々情報入手できます。
+Google や Youtube で「D1 Mini L298N」「D1 Mini HC-SR04」を検索すると色々情報入手できます。
 
 ## 6.1. ロボットカー
 
