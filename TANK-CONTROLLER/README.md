@@ -38,8 +38,6 @@ Arduino IDE からスケッチをマイコンボードに書き込みし、ホ�
 
 本プロジェクトのスケッチを使用するには、事前に Arduino IDE 開発環境と ESP8266 が動作するための設定が必要です。
 
-## 3.1. 更新中・・・
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
