@@ -76,5 +76,6 @@ Google や Youtube で「D1 Mini L298N」「D1 Mini HC-SR04」を検索すると
 ## 6.1. ロボットカー
 
 <img src="./img/robot-car.jpeg" width="480">
+<img src="./img/robot-tank.jpeg" width="480">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
