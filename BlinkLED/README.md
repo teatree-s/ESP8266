@@ -15,4 +15,8 @@ LED のプラスを D4、マイナスを GND に接続すると点滅します�
 
 <img src="./docs/wemos-d1.png" width="480">
 
+# 3. サンプル
+
+<img src="./docs/sample.jpeg" width="480">
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
