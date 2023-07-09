@@ -1,0 +1,248 @@
+<html>
+  <head>
+    <title>Arm Controller</title>
+    <meta charset="UTF-8">
+   </head>
+   <body>
+    <div align="center">
+      <div class="abxy-btn-set">
+        <div class="cross-layout">
+          <button
+            id="btnTop"
+            class="btn abxy-btn cross-layout-position-top btn-y">上</button>
+          <button
+            id="btnLeft"
+            class="btn abxy-btn cross-layout-position-left btn-x">左</button>
+          <button
+            id="btnRight"
+            class="btn abxy-btn cross-layout-position-right btn-x">右</button>
+          <button
+            id="btnBottom"
+            class="btn abxy-btn cross-layout-position-bottom btn-y">下</button>
+          <button
+            id="btnReset"
+            class="btn abxy-btn cross-layout-position-center btn-dbk">SET</button>
+          <button
+            id="btnRTop"
+            class="btn abxy-btn cross-layout-position-r-top btn-b">前</button>
+          <button
+            id="btnRLeft"
+            class="btn abxy-btn cross-layout-position-r-left btn-a">開</button>
+          <button
+            id="btnRRight"
+            class="btn abxy-btn cross-layout-position-r-right btn-a">閉</button>
+          <button
+            id="btnRBottom"
+            class="btn abxy-btn cross-layout-position-r-bottom btn-b">後</button>
+          <button
+            class="btn abxy-btn cross-layout-position-r-center btn-dbk" onclick="command('')">LED</button>
+        </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function command(num) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/command" + num);
+    xhr.send(null);
+  }
+
+  // ボタン要素を取得
+  var btnTop = document.getElementById("btnTop");
+  var btnLeft = document.getElementById("btnLeft");
+  var btnRight = document.getElementById("btnRight");
+  var btnBottom = document.getElementById("btnBottom");
+  var btnRTop = document.getElementById("btnRTop");
+  var btnRLeft = document.getElementById("btnRLeft");
+  var btnRRight = document.getElementById("btnRRight");
+  var btnRBottom = document.getElementById("btnRBottom");
+  var btnReset = document.getElementById("btnReset");
+  var xhr = new XMLHttpRequest();
+
+  btnTop.addEventListener("touchstart", function(event) {
+    btnTop.blur();
+    event.preventDefault();
+    xhr.open("GET", "/btn?state=on&kind=top");
+    xhr.send(null);
+  });
+  btnTop.addEventListener("touchend", function(event) {
+    xhr.open("GET", "/btn?state=off&kind=top");
+    xhr.send(null);
+  });
+  btnLeft.addEventListener("touchstart", function(event) {
+    btnLeft.blur();
+    event.preventDefault();
+    xhr.open("GET", "/btn?state=on&kind=left");
+    xhr.send(null);
+  });
+  btnLeft.addEventListener("touchend", function(event) {
+    xhr.open("GET", "/btn?state=off&kind=left");
+    xhr.send(null);
+  });
+  btnRight.addEventListener("touchstart", function(event) {
+    btnRight.blur();
+    event.preventDefault();
+    xhr.open("GET", "/btn?state=on&kind=right");
+    xhr.send(null);
+  });
+  btnRight.addEventListener("touchend", function(event) {
+    xhr.open("GET", "/btn?state=off&kind=right");
+    xhr.send(null);
+  });
+  btnBottom.addEventListener("touchstart", function(event) {
+    btnBottom.blur();
+    event.preventDefault();
+    xhr.open("GET", "/btn?state=on&kind=bottom");
+    xhr.send(null);
+  });
+  btnBottom.addEventListener("touchend", function(event) {
+    xhr.open("GET", "/btn?state=off&kind=bottom");
+    xhr.send(null);
+  });
+  btnRTop.addEventListener("touchstart", function(event) {
+    btnRTop.blur();
+    event.preventDefault();
+    xhr.open("GET", "/btn?state=on&kind=r-top");
+    xhr.send(null);
+  });
+  btnRTop.addEventListener("touchend", function(event) {
+    xhr.open("GET", "/btn?state=off&kind=r-top");
+    xhr.send(null);
+  });
+  btnRLeft.addEventListener("touchstart", function(event) {
+    btnRLeft.blur();
+    event.preventDefault();
+    xhr.open("GET", "/btn?state=on&kind=r-left");
+    xhr.send(null);
+  });
+  btnRLeft.addEventListener("touchend", function(event) {
+    xhr.open("GET", "/btn?state=off&kind=r-left");
+    xhr.send(null);
+  });
+  btnRRight.addEventListener("touchstart", function(event) {
+    btnRRight.blur();
+    event.preventDefault();
+    xhr.open("GET", "/btn?state=on&kind=r-right");
+    xhr.send(null);
+  });
+  btnRRight.addEventListener("touchend", function(event) {
+    xhr.open("GET", "/btn?state=off&kind=r-right");
+    xhr.send(null);
+  });
+  btnRBottom.addEventListener("touchstart", function(event) {
+    btnRBottom.blur();
+    event.preventDefault();
+    xhr.open("GET", "/btn?state=on&kind=r-bottom");
+    xhr.send(null);
+  });
+  btnRBottom.addEventListener("touchend", function(event) {
+    xhr.open("GET", "/btn?state=off&kind=r-bottom");
+    xhr.send(null);
+  });
+  btnReset.addEventListener("touchstart", function(event) {
+    btnReset.blur();
+    event.preventDefault();
+    xhr.open("GET", "/btn?state=on&kind=reset");
+    xhr.send(null);
+  });
+</script>
+
+<style>
+  .title {
+    font-size: 6em;
+  }
+
+  .btn {
+    cursor: pointer;
+    font-size: 4em;
+  }
+
+  .cross-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .cross-layout .cross-layout-position-top {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+  .cross-layout .cross-layout-position-left {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+  .cross-layout .cross-layout-position-center {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+  .cross-layout .cross-layout-position-right {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+  }
+  .cross-layout .cross-layout-position-bottom {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+  }
+  .cross-layout .cross-layout-position-r-top {
+    grid-row: 1 / 2;
+    grid-column: 5 / 6;
+  }
+  .cross-layout .cross-layout-position-r-left {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+  }
+  .cross-layout .cross-layout-position-r-center {
+    grid-row: 2 / 3;
+    grid-column: 5 / 6;
+  }
+  .cross-layout .cross-layout-position-r-right {
+    grid-row: 2 / 3;
+    grid-column: 6 / 7;
+  }
+  .cross-layout .cross-layout-position-r-bottom {
+    grid-row: 3 / 4;
+    grid-column: 5 / 6;
+  }
+
+  .abxy-btn {
+    border-radius: 25%;
+    width: 4em;
+    height: 4em;
+    color: white;
+  }
+
+  .btn-x {
+    background-color: #962dff;
+  }
+  .btn-y {
+    background-color: #ff962d;
+  }
+  .btn-a {
+    background-color: #ff2d96;
+  }
+  .btn-b {
+    background-color: #2d96ff;
+  }
+  .btn-bk {
+    background-color: black;
+  }
+  .btn-lbk {
+    border-style: none;
+    background-color: lightgray;
+  }
+  .btn-dbk {
+    background-color: darkgray;
+  }
+
+  .abxy-btn-set {
+    display: inline-block;
+    padding: 1em;
+    background-color: lightgray;
+    border-radius: 25%;
+  }
+
+  body {
+    user-select: none;
+  }
+</style>
