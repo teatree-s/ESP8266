@@ -50,7 +50,7 @@ Arduino IDE からスケッチをマイコンボードに書き込みし、ホ�
 
 - [Arduino ESP8266 LittleFS Filesystem Uploader](https://github.com/earlephilhower/arduino-esp8266littlefs-plugin)
 
-更新中・・・
+Arduino IDE 2.0 以降は使用できないようですので、Arduino IDE 1.8 をご使用ください。
 
 ## 4.2. 配線図
 
