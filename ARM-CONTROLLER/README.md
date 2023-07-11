@@ -54,6 +54,12 @@ Arduino IDE 2.0 以降は使用できないようですので、Arduino IDE 1.8 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 4.2. 配線図
+
+<img src="./img/IMG_3930.jpeg" width="480">
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- LICENSE -->
 
 # 5. ライセンス
