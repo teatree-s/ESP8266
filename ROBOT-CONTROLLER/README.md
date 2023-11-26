@@ -14,6 +14,9 @@ Arduino IDE からスケッチをマイコンボードに書き込みし、ホ�
 
 制御するモーターはなんでも良いので、様々な環境で使用することができます。
 
+<img src="./img/robot-car.jpeg" width="480">
+<img src="./img/robot-tank.jpeg" width="480">
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ABOUT THE TARGET -->
@@ -44,17 +47,24 @@ Arduino IDE からスケッチをマイコンボードに書き込みし、ホ�
 
 # 4. 使い方
 
-## 4.1. ファイルアップロード
+## 4.1. 組み立て
+
+タンクを作成する場合にはユニバーサルプレートを次のように切って写真参考に組み立ててください。
+
+<img src="./img/IMG_3185.jpeg" width="480">
+
+## 4.2. 配線図
+
+<img src="./img/wiring-diagram.jpeg" width="480">
+<img src="./img/drv8833-module-pinout.jpg" width="480">
+
+## 4.3. ファイルアップロード
 
 ロボットカーをコントロールするためのホームページ「index.html」を D1 Mini へアップロードするには LittleFS を使用します。
 
 - [Arduino ESP8266 LittleFS Filesystem Uploader](https://github.com/earlephilhower/arduino-esp8266littlefs-plugin)
 
 Arduino IDE 2.0 以降は使用できないようですので、Arduino IDE 1.8 をご使用ください。
-
-## 4.2. 配線図
-
-<img src="./img/wiring-diagram.jpeg" width="480">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -70,14 +80,10 @@ Arduino IDE 2.0 以降は使用できないようですので、Arduino IDE 1.8 
 
 - [Arduino で DC モーターを制御する](https://burariweb.info/electronic-work/arduino-learning/arduino-motor-driver-l298n.html)
 - [Arduino と Mini L298N モータードライバーでモーターを制御する](https://web-memo-s.hatenablog.com/entry/2021/02/22/125619)
+- [RaspberryPi Pico で DC モータとモータドライバを使う](https://tamanegi.digick.jp/computer-embedded/module/dcmotor/)
 - [Create a WIFI-controlled Robot with Wemos D1 Mini + L298N](https://www.youtube.com/watch?v=BuSS_MBPCEk)
 - [ESP8266-Wemos D1 mini with HC-SR04 Ultrasonic Sensor](https://microdigisoft.com/esp8266-wemos-d1-mini-with-hc-sr04-ultrasonic-sensor/)
 
 Google や Youtube で「D1 Mini L298N」「D1 Mini HC-SR04」を検索すると色々情報入手できます。
-
-## 6.1. ロボットカー
-
-<img src="./img/robot-car.jpeg" width="480">
-<img src="./img/robot-tank.jpeg" width="480">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
