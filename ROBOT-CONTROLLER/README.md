@@ -53,6 +53,10 @@ Arduino IDE からスケッチをマイコンボードに書き込みし、ホ�
 
 <img src="./img/IMG_3185.jpeg" width="480">
 
+ロボットカーは以下の通り。
+
+<img src="./docs/robot-car.png" width="480">
+
 ## 4.2. 配線図
 
 <img src="./img/wiring-diagram.jpeg" width="480">
